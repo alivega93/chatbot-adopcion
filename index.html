@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot simple</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/Styles.css">
+
+    <!-- JavaScript (arriba, usando defer) -->
+    <script src="Js/Script.js" defer></script>
+</head>
+
+<body>
+
+<main class="chatbot-container" aria-label="Chatbot de preguntas frecuentes">
+
+
+    <h1>Chatbot 🤖</h1>
+    <p>
+        Escribe un mensaje y el chatbot responderá con base en preguntas predefinidas.
+        También puede responder en <span lang="en">English</span>.
+    </p>
+
+    <!-- Área de mensajes -->
+    <section 
+        class="chat-messages" 
+        id="chatMessages"
+        aria-live="polite"
+        aria-label="Mensajes del chat">
+    </section>
+
+    <!-- Formulario -->
+    <form class="chat-form" id="chatForm" aria-label="Formulario de chat">
+        
+        <label for="userInput">Escribe tu mensaje</label>
+        
+        <input 
+            type="text" 
+            id="userInput" 
+            name="userInput"
+            placeholder="Ej. hola"
+            required
+        >
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</main>
+
+</body>
+</html>

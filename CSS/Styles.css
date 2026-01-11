@@ -1,0 +1,156 @@
+/* ===============================
+   CONFIGURACIÓN GENERAL
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+
+/* ===============================
+   CONTENEDOR PRINCIPAL
+================================ */
+.chatbot-container {
+    max-width: 420px;
+    margin: 4rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   TEXTO
+================================ */
+.chatbot-container h1,
+.chatbot-container p {
+    text-align: center;
+}
+
+/* ===============================
+   ÁREA DE MENSAJES
+================================ */
+.chat-messages {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    height: 260px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+}
+
+/* ===============================
+   MENSAJES
+================================ */
+.message {
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    max-width: 85%;
+    font-size: 0.9rem;
+}
+
+.message.user {
+    background-color: #dbeafe;
+    margin-left: auto;
+}
+
+.message.bot {
+    background-color: #e5e7eb;
+    margin-right: auto;
+}
+
+/* ===============================
+   GALERÍA DE IMÁGENES
+================================ */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ===============================
+   FORMULARIO
+================================ */
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chat-form label {
+    font-size: 0.85rem;
+}
+
+.chat-form input {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.chat-form input:focus {
+    outline: 2px solid #2563eb;
+}
+
+.chat-form button {
+    padding: 0.6rem;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.chat-form button:hover,
+.chat-form button:focus {
+    background-color: #1d4ed8;
+}
+
+/* ===============================
+   FOCO ACCESIBLE
+================================ */
+:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+
+/* ===============================
+   MODO OSCURO
+================================ */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f5f5f5;
+    }
+
+    .chatbot-container {
+        background-color: #1e1e1e;
+    }
+
+    .chat-messages {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .message.user {
+        background-color: #1e40af;
+        color: #fff;
+    }
+
+    .message.bot {
+        background-color: #374151;
+        color: #fff;
+    }
+}
